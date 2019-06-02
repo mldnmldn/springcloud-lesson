@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.segumentfault</groupId>
+    <artifactId>spring-cloud-lesson-7</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <artifactId>user-service-provider</artifactId>
+  <packaging>war</packaging>
+  <name>user-service-provider Maven Webapp</name>
+  <url>http://maven.apache.org</url>
+  <dependencies>
+     <!-- 依赖 用户 API -->
+        <dependency>
+            <groupId>com.segumentfault</groupId>
+            <artifactId>user-api</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+          <!-- 依赖 Spring Cloud Netflix Hystrix -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-hystrix</artifactId>
+        </dependency>
+  </dependencies>
+  <build>
+    <finalName>user-service-provider</finalName>
+  </build>
+</project>
